@@ -1,0 +1,37 @@
+All these files are released under the GPL Version 2 License or greater.
+
+   animations.sh
+   animator.pl
+   animator.pl.todo
+   arch1
+   circle.pl
+   contains
+   Contains.pm
+   distance.plot
+   goodbadtime.pl
+   GPL-2
+   HistODiff.pl
+   importevents.plot
+   lines.pl
+   loggen.pl
+   ModuleGraph.pm
+   README
+   stats_track.pl
+   tree
+   yarn
+
+Dependencies:
+	
+	CREX
+	Make the modules.txt file which indicates who contains what
+	ROOT is the top level.
+
+Then run CREX and put the results (symbol_table.txt modules.txt and
+history.txt) in ../data to where you are and run HistODiff.pl
+
+Then run animator.pl in the current dir of HistODiff.pl
+	perl animator.pl -Cd -o postgresql.default.swf
+	perl animator.pl -Ci -o postgresql.important.swf
+	perl animator.pl -Chd -o postgresql.highlight_decay.swf -decay 4
+	perl animator.pl -Cid -o postgresql.important_decay.swf -decay 4
+	perl animator.pl -Cdd -o postgresql.everything_colorful_decay.swf -decay 4
